@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plagiarism Checker</title>
+    <style>
+        body { 
+            height:100%;
+            font-family: 'Open Sans', sans-serif;
+            background: #3C5186;
+            color: #fff;
+            font-size: 18px;
+            text-align:center;
+            letter-spacing:1.2px;
+            background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128-+138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+            
+        }
+        h1{
+            font-size: 60px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:#FFF5DE;
+        }
+        input[type=submit] {
+            background-color: #3C5186;
+            border: 5px dashed white;
+            color: white;
+            padding: 16px 32px;
+            margin: 4px 2px;
+            font-size:25px;
+            border-radius:15px;
+        }
+        input[type=submit]:hover{
+            font-size:25px;
+            background-color: white;
+            color:#3C5186;
+        }
+        #text{
+            font-size:25px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>PLAGIARISM CHECKER</h1>
+        <form method="post" action="{{url_for('check')}}">
+            <textarea id="text" name="text" rows="13" cols=60" required></textarea><br><br>
+            <input id="check" type="submit" value="Check!">
+        </form>
+    </center>
+</body>
+</html>
