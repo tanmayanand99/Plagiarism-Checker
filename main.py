@@ -8,6 +8,8 @@ from nltk.corpus import stopwords
 import nltk
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+
+nltk.download('punkt')
 nltk.download('stopwords')
 
 p = np.load('data.npy')
