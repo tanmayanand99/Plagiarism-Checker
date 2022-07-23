@@ -46,7 +46,7 @@ def check():
         dp = cosine_similarity(X_train_tf_idf[i],X_train_tf_idf[0:flen])
         m=np.argmax(dp)
         print("Simmilarity With:")
-        if(dp[0][m]>0.3):
+        if(dp[0][m]>0.5):
             sum=sum+(dp[0][m]*100)
             count=0
             print(loaded_dict[npt[m]])
