@@ -9,17 +9,11 @@
         span{
             font-size: 20px;
         }
-        .org:nth-child(odd){
+        .org{
             background-color:red;
         }
-        .org:nth-child(even){
-            background-color:black;
-        }
-        .ans:nth-child(odd){
+        .ans{
             background-color:red;
-        }
-        .ans:nth-child(even){
-            background-color:black;
         }
         body { 
             height:100%;
@@ -58,13 +52,13 @@
         {% endif %}
         <br><br>
     {% endfor %}
-    <h1>Matched Answers :</h1><br>
+    <h1>Title Of Matched Answers :</h1><br>
     {%for i,val in data.items()%}
         <span id="num">{{loop.index}}.</span>
         {% if val=="0" %}
             <span class="ans"></span>     
         {% else %}
-            <span class="ans">{{val}}</span>  
+            <span class="ans">{{val}}</span><span>        {{senten[loop.index-1]}} %</span> <span>,    Similar Word Count : {{c[loop.index-1]}}</span>
         {% endif %}
         <br><br>
     {% endfor %}
