@@ -8,12 +8,16 @@ from nltk.corpus import stopwords
 import nltk
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+import pickle
 
 nltk.download('punkt')
 nltk.download('stopwords')
 
 p = np.load('data.npy')
 notprocessed = np.load('notprocessed.npy')
+
+with open('saved_dictionary.pkl', 'rb') as f:
+    loaded_dict = pickle.load(f)
 
 app=Flask(__name__)
 
@@ -42,7 +46,8 @@ def check():
         print("Simmilarity With:")
         sum=sum+(dp[0][m]*100)
         if(dp[0][m]>0.3):
-            final[npt[i]]=npt[m]
+            print(loaded_dict[npt[m]])
+            final[npt[i]]=loaded_dict[npt[m]]
             print(dp[0][m])
         else:
             final[npt[i]]="0"
