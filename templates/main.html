@@ -39,6 +39,20 @@
             align-content:center;
             font-weight: bold;
         }
+        a{
+            background-color: white;
+            border: 3px solid white;
+            color: white;
+            padding: 12px 22px;
+            margin: 10px 2px;
+            font-size:25px;
+            text-decoration:none;
+            color:#3C5186;
+        }
+        a:hover{
+            background-color: #3C5186;
+            color:white;
+        }
     </style>
 </head>
 <body>
@@ -62,5 +76,11 @@
         {% endif %}
         <br><br>
     {% endfor %}
+    <br>
+    <br>
+    <span><a href="{{url_for('home')}}">Enter Another Text</a>&nbsp;&nbsp;<a href="{{url_for('file')}}">Upload Another File</a></span>
+    <br>
+    <br>
+    <br>
 </body>
 </html>
