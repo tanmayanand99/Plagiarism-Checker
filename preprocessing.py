@@ -2,7 +2,6 @@ import re
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 
-
 stemmer=PorterStemmer()
 
 def removeUnnecessary(text):
@@ -18,4 +17,5 @@ def porterStemmer(text):
     return text1
 def applyMyFuncs(text):
     return porterStemmer(removeStopWords(removeUnnecessary(text)))
+
     

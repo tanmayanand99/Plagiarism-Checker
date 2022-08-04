@@ -78,9 +78,9 @@ def checkfile():
             print(loaded_dict[npt[m]])
             print(npt[m])
             print(npt[i])
-            text = word_tokenize(npt[i].lower())
+            text = word_tokenize(k[i].lower())
             print(text)
-            text1=set(word_tokenize(npt[m].lower()))
+            text1=set(word_tokenize(k[m].lower()))
             print(text1)
             for il in text:
                 if il in text1:
@@ -130,9 +130,9 @@ def check():
             print(loaded_dict[npt[m]])
             print(npt[m])
             print(npt[i])
-            text = word_tokenize(npt[i].lower())
+            text = word_tokenize(k[i].lower())
             print(text)
-            text1=set(word_tokenize(npt[m].lower()))
+            text1=set(word_tokenize(k[m].lower()))
             print(text1)
             for il in text:
                 if il in text1:
